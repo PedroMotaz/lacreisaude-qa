@@ -1,0 +1,42 @@
+name: Cypress
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  e2e:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cadastro
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          spec: cypress/e2e/features/cadastro.feature
+
+      - name: Pos-cadastro e busca
+        if: ${{ secrets.CYPRESS_EMAIL != '' }}
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          browser: chrome
+          spec: cypress/e2e/features/pos-cadastro.feature,cypress/e2e/features/busca-profissional.feature
+        env:
+          CYPRESS_email: ${{ secrets.CYPRESS_EMAIL }}
+          CYPRESS_password: ${{ secrets.CYPRESS_PASSWORD }}
+          CYPRESS_phone: ${{ secrets.CYPRESS_PHONE }}
+
+      - name: Upload relatorios
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorios-cypress
+          path: |
+            cypress/reports
+            cypress/videos
+            cypress/screenshots
+            evidencias
+          if-no-files-found: warn

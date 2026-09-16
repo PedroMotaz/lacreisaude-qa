@@ -3,31 +3,29 @@
 Funcionalidade: Busca profissional
 
 Cenario: Buscar profissional
-    dado que estou na tela de Buscar
-    quando insiro na barra de pesquisa o que procuro
-    entao devo visualizar profissionais relacionados aos termos pesquisados
+    Dado que estou na tela de Buscar
+    Quando insiro na barra de pesquisa o que procuro
+    Entao devo visualizar profissionais relacionados aos termos pesquisados
 
 Cenario: Iniciar contato/agendamento
-    dado que encontrei um profissional desejado
-    quando prossigo em "agendar consulta"
-    entao sou direcionado para a pagina do profissional onde posso agendar o atendimento
+    Dado que encontrei um profissional desejado
+    Quando prossigo em "agendar consulta"
+    Entao sou direcionado para a pagina do profissional onde posso agendar o atendimento
 
 Cenario: Validacao do numero de celular
-    dado que estou na tela "Contatar Profissional"
-    quando insiro um numero de celular invalido
-    entao devo visualizar uma mensagem de validacao "Número de celular incorreto. Digite novamente."
-    e nao devo conseguir prosseguir
+    Dado que estou na tela "Contatar Profissional"
+    Quando insiro um numero de celular invalido
+    Entao devo visualizar uma mensagem de validacao "Número de celular incorreto. Digite novamente."
+    E nao devo conseguir prosseguir
 
 Cenario: Envio do codigo de verificacao
-    dado que estou na tela "Contatar Profissional"
-    e informo um numero de celular valido
-    quando solicito o envio do codigo
-    entao devo receber um codigo de verificacao no numero informado
+    Dado que estou na tela "Contatar Profissional"
+    E informo um numero de celular valido
+    Quando solicito o envio do codigo
+    Entao devo receber um codigo de verificacao no numero informado
 
 Cenario: Validacao do codigo
-    dado que solicitei um codigo de verificacao
-    quando informo um codigo invalido
-    entao devo visualizar uma mensagem de erro "Código incorreto. Verifique se digitou corretamente ou solicite um novo código."
-    e nao devo conseguir prosseguir
-
-    
+    Dado que solicitei um codigo de verificacao
+    Quando informo um codigo invalido
+    Entao devo visualizar a mensagem de erro "Código incorreto. Verifique se digitou corretamente ou solicite um novo código."
+    E nao devo conseguir prosseguir

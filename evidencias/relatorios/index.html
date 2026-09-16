@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Relatorio Cypress + Cucumber</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 32px; color: #1f2933; background: #f4f6f8; }
+        h1, h2, h3 { margin: 0 0 12px; }
+        .summary, .links { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+        .card, .links a { background: #fff; padding: 16px 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.08); color: #1f2933; text-decoration: none; }
+        .links a:hover { background: #e4e7eb; }
+        .feature { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+        .scenario { margin-top: 16px; padding-top: 16px; border-top: 1px solid #e4e7eb; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        .step { display: flex; justify-content: space-between; gap: 16px; padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; }
+        .passed { background: #e8f7ee; }
+        .failed { background: #fde8e8; }
+        .step em { color: #616e7c; font-style: normal; }
+        pre { white-space: pre-wrap; margin: 8px 0 0; }
+    </style>
+</head>
+<body>
+    <h1>Relatorio Cypress + Cucumber</h1>
+    <div class="links"><a href="busca-profissional.html">Busca de profissionais</a><a href="cadastro.html">Cadastro de pessoa usuaria</a><a href="pos-cadastro.html">Pos-cadastro da pessoa usuaria</a></div>
+    <div class="summary">
+        <div class="card">Features: 3</div>
+        <div class="card">Cenarios: 3</div>
+        <div class="card">Steps passados: 18</div>
+        <div class="card">Steps falhos: 0</div>
+    </div>
+    <section class="feature"><h2>Funcionalidade: Busca de profissionais</h2><article class="scenario passed"><h3>Cenario: Buscar profissional e iniciar agendamento</h3><ul><li class="step passed"><span>Dado que estou logado com uma conta com cadastro concluido</span><em>7172 ms</em></li><li class="step passed"><span>Quando pesquiso por um profissional</span><em>102 ms</em></li><li class="step passed"><span>E seleciono um profissional para agendamento</span><em>359 ms</em></li><li class="step passed"><span>E acesso as informacoes de contato</span><em>508 ms</em></li><li class="step passed"><span>E preencho meu numero de celular</span><em>1825 ms</em></li><li class="step passed"><span>E solicito o envio do codigo</span><em>124 ms</em></li><li class="step passed"><span>Entao devo visualizar a tela de verificacao do codigo</span><em>23 ms</em></li></ul></article></section><section class="feature"><h2>Funcionalidade: Cadastro de pessoa usuaria</h2><article class="scenario passed"><h3>Cenario: Preencher o formulario de cadastro com dados validos</h3><ul><li class="step passed"><span>Dado que estou na tela de cadastro</span><em>2420 ms</em></li><li class="step passed"><span>Quando preencho o formulario com dados validos</span><em>3863 ms</em></li><li class="step passed"><span>E aceito os termos obrigatorios</span><em>236 ms</em></li><li class="step passed"><span>E submeto o cadastro</span><em>3189 ms</em></li><li class="step passed"><span>Entao devo visualizar a tela de verificacao de e-mail</span><em>52 ms</em></li><li class="step passed"><span>E posso voltar para a tela de login</span><em>273 ms</em></li></ul></article></section><section class="feature"><h2>Funcionalidade: Pos-cadastro da pessoa usuaria</h2><article class="scenario passed"><h3>Cenario: Concluir o onboarding e ir para busca de profissionais</h3><ul><li class="step passed"><span>Dado que estou logado com uma conta pendente de cadastro</span><em>7084 ms</em></li><li class="step passed"><span>Quando continuo o cadastro</span><em>113 ms</em></li><li class="step passed"><span>E respondo as perguntas de recortes sociais</span><em>809 ms</em></li><li class="step passed"><span>E concluo o cadastro</span><em>120 ms</em></li><li class="step passed"><span>Entao devo visualizar a opcao de buscar profissionais</span><em>627 ms</em></li></ul></article></section>
+</body>
+</html>
