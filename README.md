@@ -14,19 +14,36 @@ https://paciente-staging.lacreisaude.com.br/
 ## Estrutura do projeto
 
 lacreisaude-qa/
-├── cypress.config.js
-├── cypress.env.json.example
+├── .github/
+│   └── workflows/
+│       └── cypress.yml
 ├── cypress/
-│   ├── e2e/features/
-│   └── support/step_definitions/
+│   ├── e2e/
+│   │   └── features/
+│   │       ├── cadastro.feature
+│   │       ├── pos-cadastro.feature
+│   │       └── busca-profissional.feature
+│   └── support/
+│       └── step_definitions/
+│           ├── cadastro.js
+│           ├── pos-cadastro.js
+│           └── busca-profissional.js
+├── evidencias/
+│   ├── relatorios/
+│   └── videos/
 ├── features/
 │   ├── BuscaProfissional.feature
 │   ├── Cadastro.feature
 │   ├── Login.feature
 │   ├── PosCadastro.feature
 │   └── RecuperacaoSenha.feature
-└── performance/
-    └── busca-profissional.js
+├── performance/
+│   └── busca-profissional.js
+├── cypress.config.js
+├── cypress.env.json.example
+├── package.json
+└── README.md
+
 
 ## Testes funcionais
 
