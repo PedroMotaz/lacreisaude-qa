@@ -7,6 +7,8 @@ on:
 jobs:
   e2e:
     runs-on: ubuntu-22.04
+    env:
+      HAS_LOGIN: ${{ secrets.CYPRESS_EMAIL != '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,7 +20,7 @@ jobs:
           spec: cypress/e2e/features/cadastro.feature
 
       - name: Pos-cadastro e busca
-        if: ${{ secrets.CYPRESS_EMAIL != '' }}
+        if: env.HAS_LOGIN == 'true'
         uses: cypress-io/github-action@v6
         with:
           install: false
