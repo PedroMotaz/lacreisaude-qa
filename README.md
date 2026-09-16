@@ -13,20 +13,38 @@ https://paciente-staging.lacreisaude.com.br/
 
 ## Estrutura do projeto
 
+```text
 lacreisaude-qa/
-├── cypress.config.js
-├── cypress.env.json.example
+├── .github/
+│   └── workflows/
+│       └── cypress.yml
 ├── cypress/
-│   ├── e2e/features/
-│   └── support/step_definitions/
+│   ├── e2e/
+│   │   └── features/
+│   │       ├── cadastro.feature
+│   │       ├── pos-cadastro.feature
+│   │       └── busca-profissional.feature
+│   └── support/
+│       └── step_definitions/
+│           ├── cadastro.js
+│           ├── pos-cadastro.js
+│           └── busca-profissional.js
+├── evidencias/
+│   ├── relatorios/
+│   └── videos/
 ├── features/
 │   ├── BuscaProfissional.feature
 │   ├── Cadastro.feature
 │   ├── Login.feature
 │   ├── PosCadastro.feature
 │   └── RecuperacaoSenha.feature
-└── performance/
-    └── busca-profissional.js
+├── performance/
+│   └── busca-profissional.js
+├── cypress.config.js
+├── cypress.env.json.example
+├── package.json
+└── README.md
+```
 
 ## Testes funcionais
 
@@ -89,7 +107,8 @@ O workflow `.github/workflows/cypress.yml` roda em todo `push` e `pull_request`.
 
 O cenário de cadastro executa sempre.
 
-Pós-cadastro e busca não executam por conta da autenticação manual no email 
+Pós-cadastro e busca não executam por conta da autenticação manual no email.
+
 ## Documentação
 
 Os cenários funcionais estão documentados em Gherkin no diretório `features/`.
